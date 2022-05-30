@@ -1,0 +1,33 @@
+﻿#checkoutBox{
+    position: relative;
+    height: 600px;
+    width: 600px;
+    border: solid;
+}
+
+.payment{
+    padding:10px;
+    font-size: 24px;
+}
+
+.adress{
+    padding: 10px;
+    font-size: 24px;
+}
+
+.btn-style {
+    color: #fff;
+    background-color: #E9967A;
+    border-color: darkred;
+}
+
+.btn-style:hover {
+    color: #fff;
+    background-color: #FA8072;
+    border-color: darkred;
+}
+
+#btnOrder{
+    position: absolute;
+    right: 10px;
+}

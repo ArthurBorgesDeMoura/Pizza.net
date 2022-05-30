@@ -1,0 +1,238 @@
+﻿#title{
+    text-align:center;
+}
+
+.colum {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 405px;
+    
+}
+
+#pepperoni {
+    margin-top: -13px;
+    height: 427px;
+    width: 400px;
+}
+
+.pepperoni {
+    position: relative;
+}
+
+#pName {
+    position: absolute;
+    bottom: 43px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+#pCost {
+    position: absolute;
+    bottom: 13px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+
+
+#margherita {
+    height: 400px;
+    width: 400px;
+}
+
+.margherita {
+    position: relative;
+}
+
+#mName {
+    position: absolute;
+    bottom: 43px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+#mCost {
+    position: absolute;
+    bottom: 13px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+#vegetarian {
+    margin-top: 3px;
+    height: 394px;
+    width: 400px;
+}
+
+.vegetarian {
+    position: relative;
+}
+
+#vName {
+    position: absolute;
+    bottom: 43px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+#vCost {
+    position: absolute;
+    bottom: 13px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+#mushroom1 {
+    margin-top: -4px;
+    height: 435px;
+    width: 400px;
+}
+
+.mushroom1 {
+    position: relative;
+    height:440px;
+}
+
+#m1Name {
+    position: absolute;
+    bottom: 55px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+#m1Cost {
+    position: absolute;
+    bottom: 26px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+#mushroom2 {
+    height: 427px;
+    width: 400px;
+}
+
+.mushroom2 {
+    position: relative;
+    height: 440px;
+}
+
+#m2Name {
+    position: absolute;
+    bottom: 55px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+#m2Cost {
+    position: absolute;
+    bottom: 26px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+#mushroom3 {
+    margin-top: 12px;
+    height: 404px;
+    width: 400px;
+}
+
+.mushroom3 {
+    position: relative;
+    height: 440px;
+}
+
+#m3Name {
+    position: absolute;
+    bottom: 55px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+#m3Cost {
+    position: absolute;
+    bottom: 26px;
+    width: 400px;
+    text-align: center;
+    background-color: white;
+}
+
+.costum-colum {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: left;
+    height: 405px;
+    
+}
+
+#costum {
+    height: 427px;
+    width: 400px;
+}
+
+#cName {
+    text-align: center;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.first-buttons {
+    bottom: -25px;
+    position: absolute;
+    display: flex;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+.second-buttons {
+    bottom: -47px;
+    position: absolute;
+    display: flex;
+    width: 1200px;
+    margin-top: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+.btn-style {
+    color: #fff;
+    background-color: #E9967A;
+    border-color: darkred;
+}
+
+.btn-style:hover {
+    color: #fff;
+    background-color: #FA8072;
+    border-color: darkred;
+}
+
+.modal-b {
+    display: flex;
+}
+
+.toppings-list {
+    margin-left: 110px;   
+}
+
+.toppigns-items {
+    display:flex;
+   justify-content: space-between;
+   width:140px;
+}

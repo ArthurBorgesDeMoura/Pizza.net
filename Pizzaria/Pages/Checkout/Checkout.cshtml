@@ -1,0 +1,53 @@
+﻿@page
+@model Pizzaria.Pages.Checkout.CheckoutModel
+@{
+
+    string cheese = @Model.Cheese ? "  cheese" : "";
+    string mushroom = @Model.Mushroom ? "  mushroom" : "";
+    string pinaple = @Model.Pinaple ? "  pinaple" : "";
+    string sauce = @Model.Sauce ? "  sauce" : "";
+    string tomato = @Model.Tomato ? " tomato" : "";
+    string pepperoni = @Model.Pepperoni ? "  pepperoni" : "";
+    
+
+}
+<head>
+    <link rel="stylesheet" href="~/css/Checkout.css">
+</head>
+
+<h2>Please choose your payment method and insert your adress:</h2>
+
+<div id="checkoutBox">
+
+    <form method="post" id="checkoutForm">
+        <div class="payment">
+            <label>Payment method:</label><br />
+            <label for="Cr">Credit card</label>
+            <input type="radio" id="Cr" name="topping" value="Cr" required><br />
+            <label for="Ca">Cash</label>
+            <input type="radio" id="Ca" name="topping" value="Ca">
+            <hr />
+        </div>
+        <div class="adress">
+            <label>Adress:</label>
+            <input type="text" id="adress" required />
+            <hr />
+        </div>
+        <div>
+            <p>1 @Model.PizzaName</p>
+            <p>@cheese</p>
+            <p>@mushroom</p>
+            <p>@pinaple</p>
+            <p>@sauce</p>
+            <p>@tomato</p>
+            <p>@pepperoni</p>
+            <p>Total: U$@Model.PizzaPrice</p>
+            
+        </div>
+        <div id="btnOrder">
+            <button class="btn btn-style" type="submit" id="checkOrder">Order</button>
+        </div>
+    </form>
+</div>
+
+

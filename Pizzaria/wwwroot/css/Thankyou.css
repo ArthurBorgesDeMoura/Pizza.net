@@ -1,0 +1,13 @@
+﻿#tnx{
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    height:80px;
+    width: 80px;
+}
+
+#txt {
+    position: absolute;
+    right: 82px;
+    bottom: 85px;
+}

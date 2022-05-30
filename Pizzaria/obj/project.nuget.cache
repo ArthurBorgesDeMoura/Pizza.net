@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "OzNF367a8HoaccX5Oauq1XZbnHr2sKzG9JMlYpu/umsh4V7jE9mdoG5uZ8JhLaKguDUqNIy6XQ9BiLl6U9m5mQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\arthu\\Desktop\\curso .net\\Pizzaria\\Pizzaria\\Pizzaria.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arthu\\.nuget\\packages\\fluentvalidation\\11.0.2\\fluentvalidation.11.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

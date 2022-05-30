@@ -1,0 +1,28 @@
+﻿.logo {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.logo-img {
+    width: 450px;
+}
+
+.slice-logo {
+    position: absolute;
+    right: -1.5rem;
+    bottom: -1rem;
+    width: 80px;
+}
+
+.btn-style {
+    color: #fff;
+    background-color: #E9967A;
+    border-color: darkred;
+}
+
+.btn-style:hover {
+   color: #fff;
+   background-color: #FA8072;
+   border-color: darkred;
+}

@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Pizzaria/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.0.2"
+        },
+        "runtime": {
+          "Pizzaria.dll": {}
+        }
+      },
+      "FluentValidation/11.0.2": {
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pizzaria/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FluentValidation/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ik/xogKqBmZWIURMXNEbugJlKka6iV9a4qckmKDp7sHSwIfgkZ/ewzCuAeUTkFdVZujfDW6mCLMjrrR6GG4xLQ==",
+      "path": "fluentvalidation/11.0.2",
+      "hashPath": "fluentvalidation.11.0.2.nupkg.sha512"
+    }
+  }
+}

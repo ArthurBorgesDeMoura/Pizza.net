@@ -1,0 +1,345 @@
+﻿@page
+@model Pizzaria.Pages.PizzaModel
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/Pizza.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<h1 id="title">Please choose your pizza</h1>
+
+<div class="colum">
+    <div class="pepperoni">
+        <img id="pepperoni" src="~/Images/pepperoni.png" />
+        <h4 id="pName">Pepperoni</h4>
+        <h4 id="pCost">$30,00</h4>
+    </div>
+    <div class="margherita">
+        <img id="margherita" src="~/Images/margherita.png" />
+        <h4 id="mName">Margherita</h4>
+        <h4 id="mCost">$25,00</h4>
+    </div>
+    <div class="vegetarian">
+        <img id="vegetarian" src="~/Images/Vegetarian.png" />
+        <h4 id="vName">Vegetarian</h4>
+        <h4 id="vCost">$33,00</h4>
+    </div>
+    <div class="first-buttons">
+        <a class="btn btn-style" data-toggle="modal" data-target="#exampleModalPepperoni">Choose</a>
+        <a class="btn btn-style" data-toggle="modal" data-target="#exampleModalMargherita">Choose</a>
+        <a class="btn btn-style" data-toggle="modal" data-target="#exampleModalVegetarian">Choose</a>
+    </div>
+</div>
+<br />
+<br />
+
+
+<div class="colum">
+    <div class="mushroom1">
+        <img id="mushroom1" src="~/Images/Mushroom.png" />
+        <h4 id="m1Name">Mushroom 1</h4>
+        <h4 id="m1Cost">$35,00</h4>
+    </div>
+    <div class="mushroom2">
+        <img id="mushroom2" src="~/Images/Mushroom 2.png" />
+        <h4 id="m2Name">Mushroom 2</h4>
+        <h4 id="m2Cost">$38,00</h4>
+    </div>
+    <div class="mushroom3">
+        <img id="mushroom3" src="~/Images/Mushroom 3.png" />
+        <h4 id="m3Name">Mushroom 3</h4>
+        <h4 id="m3Cost">$40,00</h4>
+    </div>
+    <div class="second-buttons">
+        <a class="btn btn-style" data-toggle="modal" data-target="#exampleModalMushroom1">Choose</a>
+        <a class="btn btn-style" data-toggle="modal" data-target="#exampleModalMushroom2">Choose</a>
+        <a class="btn btn-style" data-toggle="modal" data-target="#exampleModalMushroom3">Choose</a>
+    </div>
+</div>
+
+
+<div class="costum-colum">
+    <div id="custom">
+        <img id="costum" src="~/Images/Custom.png" />
+    </div>
+    <div id="cName">
+        <h4 id="customPizzaName">Costum Pizza</h4>
+        <h4>$60,00</h4>
+        <button type="button" class="btn btn-style" data-toggle="modal" data-target="#exampleModalCustom">Choose Toppings</button>
+    </div>
+</div>
+
+<!--PopUp for pepperoni-->
+<div class="modal fade" id="exampleModalPepperoni" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Pepperoni:</h5>
+            </div>
+            <form method="post" id="pForm">
+                <input asp-for="Pizza.PizzaName" type="hidden" id="PizzaNameP" />
+                <input asp-for="Pizza.PizzaPrice" type="hidden" id="PizzaPriceP" />
+                <div class="modal-body">
+                    <div class="modal-b">
+                        <div>
+                            <img height="200px" width="200px" src="~/Images/pepperoni.png">
+                        </div>
+                        <div>
+                            <p>Delicius pepperoni pizza with thin crispy crust!</p>
+                            <p>Ingredients:<br />Pepperoni, mozzarella, tomato sauce and oregano</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-style" type="submit" id="pOrder">Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--PopUp for margherita-->
+<div class="modal fade" id="exampleModalMargherita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Margherita:</h5>
+            </div>
+            <form method="post" id="mForm">
+                <input asp-for="Pizza.PizzaName" type="hidden" id="PizzaNameMargherita" />
+                <input asp-for="Pizza.PizzaPrice" type="hidden" id="PizzaPriceMargherita" />
+                <div class="modal-body">
+                    <div class="modal-b">
+                        <div>
+                            <img height="200px" width="200px" src="~/Images/margherita.png" />
+                        </div>
+                        <div>
+                            <p>Delicius margherita pizza, with thin crispy crust!</p>
+                            <p>Ingredients:<br />Mozzarella, tomato sauce, tomatoes and basil</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-style" type="submit" id="mOrder">Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--PopUp for vegetarian-->
+<div class="modal fade" id="exampleModalVegetarian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Vegetarian:</h5>
+            </div>
+            <form method="post" id="vForm">
+                <input asp-for="Pizza.PizzaName" type="hidden" id="PizzaNameVeg" />
+                <input asp-for="Pizza.PizzaPrice" type="hidden" id="PizzaPriceVeg" />
+                <div class="modal-body">
+                    <div class="modal-b">
+                        <div>
+                            <img height="200px" width="200px" src="~/Images/Vegetarian.png">
+                        </div>
+                        <div>
+                            <p>Delicius vegetarian pizza, with thin crispy crust!</p>
+                            <p>Ingredients:<br />Buffalo mozzarella, tomatoes, tomato sauce</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-style" type="submit" id="vOrder">Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--PopUp for mushroom 1-->
+<div class="modal fade" id="exampleModalMushroom1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mushroom 1:</h5>
+            </div>
+            <form method="post" id="m1Form">
+                <input asp-for="Pizza.PizzaName" type="hidden" id="PizzaNameM1" />
+                <input asp-for="Pizza.PizzaPrice" type="hidden" id="PizzaPriceM1" />
+                <div class="modal-body">
+                    <div class="modal-b">
+                        <div>
+                            <img height="200px" width="200px" src="~/Images/Mushroom.png">
+                        </div>
+                        <div>
+                            <p>Delicius mushroom pizza, with thin crispy crust!</p>
+                            <p>Ingredients:<br />Mozzarella, tomato sauce, tomatoes, mushrooms and basil</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-style" type="submit" id="m1Order">Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--PopUp for mushroom 2-->
+<div class="modal fade" id="exampleModalMushroom2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mushroom 2:</h5>
+            </div>
+            <form method="post" id="m2Form">
+                <input asp-for="Pizza.PizzaName" type="hidden" id="PizzaNameM2" />
+                <input asp-for="Pizza.PizzaPrice" type="hidden" id="PizzaPriceM2" />
+                <div class="modal-body">
+                    <div class="modal-b">
+                        <div>
+                            <img height="200px" width="200px" src="~/Images/Mushroom 2.png">
+                        </div>
+                        <div>
+                            <p>Delicius mushroom pizza, with thin crispy crust!</p>
+                            <p>Ingredients:<br />Mozzarella, tomato sauce, tomatoes, mushrooms and arugula</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-style" type="submit" id="m2Order">Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--PopUp for mushroom 3-->
+<div class="modal fade" id="exampleModalMushroom3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mushroom 3:</h5>
+            </div>
+            <form method="post" id="m3Form">
+                <input asp-for="Pizza.PizzaName" type="hidden" id="PizzaNameM3" />
+                <input asp-for="Pizza.PizzaPrice" type="hidden" id="PizzaPriceM3" />
+                <div class="modal-body">
+                    <div class="modal-b">
+                        <div>
+                            <img height="200px" width="200px" src="~/Images/Mushroom 3.png">
+                        </div>
+                        <div>
+                            <p>Delicius mushroom pizza, with thin crispy crust!</p>
+                            <p>Ingredients:<br />Mozzarella, tomato sauce, olives, sausages, pinaple, tomatoes, corn and mushrooms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-style" type="submit" id="m3Order">Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--PopUp for custom pizza-->
+<div class="modal fade" id="exampleModalCustom" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Choose the topping that you want in your pizza:</h5>
+            </div>
+            <form method="post" id="cForm">
+                <input asp-for="Pizza.PizzaName" type="hidden" id="PizzaNameCustom" />
+                <input asp-for="Pizza.PizzaPrice" type="hidden" id="PizzaPriceCustom" />
+                <div class="modal-body">
+                    <div class="modal-b">
+                        <div>
+                            <img height="200px" width="200px" src="~/Images/Custom.png" />
+                        </div>
+                        <div class="toppings-list">
+                            <div class="toppigns-items">
+                                <label for="Ch">Cheese</label>
+                                <input asp-for="Pizza.Cheese"  type="checkbox" id="Ch"  >
+                            </div>
+                            <div class="toppigns-items">
+                                <label for="Mu">Mushroom</label>
+                                <input  asp-for="Pizza.Mushroom" type="checkbox" id="Mu">
+                            </div>
+                            <div class="toppigns-items">
+                                <label for="Pe">Pepperoni</label>
+                                <input asp-for="Pizza.Pepperoni" type="checkbox" id="Pe">
+                            </div>
+                            <div class="toppigns-items">
+                                <label for="Pi">Pinaple</label>
+                                <input asp-for="Pizza.Pinaple" type="checkbox" id="Pi">
+                            </div>
+                            <div class="toppigns-items">
+                                <label for="Sa">Sauce</label>
+                                <input asp-for="Pizza.Sauce" type="checkbox" id="Sa">
+                            </div>
+                            <div class="toppigns-items">
+                                <label class="lCheck" for="To">Tomato</label>
+                                <input asp-for="Pizza.Tomato" id="To" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-style" type="submit" id="cOrder">Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+   document.getElementById("cOrder").onclick = function() {
+        document.getElementById("PizzaNameCustom").value = "Custom";
+        document.getElementById("PizzaPriceCustom").value = 60.00;
+        document.getElementById("cForm").submit();
+    }
+    document.getElementById("m3Order").onclick = function() {
+        document.getElementById("PizzaNameM3").value = "Mushroom 3";
+        document.getElementById("PizzaPriceM3").value = 40.00;
+        document.getElementById("m3Form").submit();
+    }
+    document.getElementById("m2Order").onclick = function() {
+        document.getElementById("PizzaNameM2").value = "Mushroom 2";
+        document.getElementById("PizzaPriceM2").value = 38.00;
+        document.getElementById("m2Form").submit();
+    }
+    document.getElementById("m1Order").onclick = function() {
+        document.getElementById("PizzaNameM1").value = "Mushroom 1";
+        document.getElementById("PizzaPriceM1").value = 35.00;
+        document.getElementById("m1Form").submit();
+    }
+    document.getElementById("vOrder").onclick = function() {
+        document.getElementById("PizzaNameVeg").value = "Vegetarian";
+        document.getElementById("PizzaPriceVeg").value = 33.00;
+        document.getElementById("vForm").submit();
+    }
+    document.getElementById("mOrder").onclick = function() {
+        document.getElementById("PizzaNameMargherita").value = "Margherita";
+        document.getElementById("PizzaPriceMargherita").value = 25.00;
+        document.getElementById("mForm").submit();
+    }
+    document.getElementById("pOrder").onclick = function() {
+        document.getElementById("PizzaNameP").value = "Pepperoni";
+        document.getElementById("PizzaPriceP").value = 30.00;
+        document.getElementById("pForm").submit();
+    }
+
+</script>
+
